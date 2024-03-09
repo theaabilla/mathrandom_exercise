@@ -6,9 +6,19 @@
     <title>Document</title>
 </head>
 <body>
+    <h4 id="nmbr"></h4>
+    <h4 id="brkdwn"></h4>
+    <h4 id="currentDate"></h4>
     <script>
         var rndmno;
         var rndmno = Math.floor(Math.random()*1001); /* rounds a number down to the nearest integer*/
+        document.getElementById("nmbr").innerHTML="Randomly Generated Number:" + rndmno;
+        var hundreds = Math.floor(rndmno/100);
+        var tens = Math.floor((rndmno%100)/10);
+        var ones = Math.floor(rndmno%10);
+        document.getElementById("brkdwn").innerHTML= "Breakdown: " + hundreds*100+ "," +tens*10+ "," +ones+ "<br>";
+        var currentDate = new Date()
+        document.getElementById("currentDate").innerHTML= currentDate;   
     </script>
 </body>
 </html>
